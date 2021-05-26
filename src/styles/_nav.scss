@@ -1,0 +1,200 @@
+/*
+    N A V  +  P A N E L S _.
+*/
+.navbar {
+    background: none;
+    position: fixed;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 10;
+    color: lightgray;
+    a {
+        color: white;
+        opacity: 0.8;
+        &:hover {
+            color: white;
+            opacity: 1;
+            text-decoration: none;
+        }
+    }
+    p {
+        float: left;
+        padding: 0 2px 1px 2px;
+        background: black;
+        opacity: 0.8;
+        margin-top: 10px;
+        margin-left: 10px;
+        font-size: 1.5rem;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    h2 {
+        float: right;
+        font-size: 3.2rem;
+        padding: 0 2px 15px 2px;
+        background: black;
+        opacity: 0.75;
+        margin-top: 10px;
+        margin-right: 10px;
+        &:hover {
+            opacity:1;
+        }
+    }
+    &-fixed-top {
+        top: 0;
+        border-width: 0 0 1px;
+        position: fixed;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+}
+  
+.material-icons {
+    opacity: 0.65;
+    -webkit-transition: top 0.2s, opacity 0.2s;
+    transition: top 0.2s, opacity 0.2s;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+    &-down, &-up {
+        position: absolute;
+        z-index: 9;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &-down {
+        &:hover {
+            top: 50%;
+        }
+    }
+    &-up {
+        &:hover {
+            top: 30%;
+        }
+    }
+    &:hover {
+        opacity: 1;
+    }
+}
+  
+#intro .material-icons {
+    font-size: 5.5rem;
+    color: $midnight-purple;
+}
+  
+#news .material-icons {
+    font-size: 5.5rem;
+    color: $pale-rouge;
+}
+  
+#noise .material-icons {
+    font-size: 5.5rem;
+    color: $electric-slime;
+}
+  
+#cinema .material-icons {
+    font-size: 5.5rem;
+    color: $respectful-ruby;
+}
+  
+#photos .material-icons {
+    font-size: 5.5rem;
+    color: $white;
+}
+  
+#contact .material-icons {
+    font-size: 5.5rem;
+    color: $respectful-ruby;
+}
+  
+#contact .material-icons:hover {
+    top: 30%;
+    opacity: 1;
+}
+  
+.panel {
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+}
+  
+#main {
+    background-color: $dark;
+    .panel {
+        border-radius: 0;
+        &:nth-child(6n + 1) {
+            background-image: escape_svg($jh_bg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition: background-image 1s;
+            -webkit-transition: background-image 1s;
+            -moz-transition: background-image 1s;
+            transition-delay: 1s;
+            -webkit-transition-delay: 1s;
+            -moz-transition-delay: 1s;
+            background-color: $midnight-purple;
+        }
+        &:nth-child( 6n + 2) {
+            background: $midnight-purple;
+            color: $black;
+            .title {
+                color: $pale-rouge;
+            }
+        }
+        &:nth-child( 6n + 3) {
+            background: $pale-rouge;
+            color: $electric-slime;
+        }
+        &:nth-child( 6n + 4) {
+            background: $electric-slime;
+            color: $respectful-ruby;
+        }
+        &:nth-child( 6n + 5) {
+            background: $gamecube-purple;
+            color: $white;
+        }
+        &:nth-child( 6n + 6) {
+            margin: 0;
+            background: $white;
+            color: $respectful-ruby;
+            border-bottom: 2px solid $dark;
+        }
+        /*
+        &:nth-child(6n + 1) {
+            background: image-url('BTLrg.png') no-repeat center top fixed;
+            background-size: cover;
+            background-blend-mode: overlay;
+            width: 100%;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-color: #8C60C1;
+            @media screen and (max-width: 999px) {
+                background: image-url('BT.png') no-repeat center top fixed;
+            }
+            @media screen and (max-width: 568px)  {
+                background: image-url('BTSml.png') no-repeat center top fixed;
+            }
+        }*/
+    }
+}
+
+.btn-lg, .btn-group-lg>.btn {
+    padding: 10px 16px;
+}
+
+.foot {
+    text-align: right;
+    background-color: inherit;
+    margin: 15px 15px 0px 0px;
+    padding: 0;
+    font-size: 1rem;
+}

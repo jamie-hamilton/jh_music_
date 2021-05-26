@@ -1,0 +1,38 @@
+{
+  "name": "j_h-site",
+  "version": "1.0.0",
+  "description": "Assets for Jamie Hamilton music site",
+  "main": "webpack.common.js",
+  "private": true,
+  "scripts": {
+    "start": "webpack serve --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Jamie Hamilton",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/preset-env": "^7.14.2",
+    "@popperjs/core": "^2.9.2",
+    "autoprefixer": "^10.2.5",
+    "babel-loader": "^8.2.2",
+    "bootstrap": "^5.0.1",
+    "clean-webpack-plugin": "*",
+    "core-js": "^3.12.1",
+    "css-loader": "^5.2.5",
+    "jquery": "^3.6.0",
+    "mini-css-extract-plugin": "^1.6.0",
+    "postcss-loader": "^5.3.0",
+    "sass": "^1.34.0",
+    "sass-loader": "^11.1.1",
+    "simplelightbox": "^2.7.2",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.37.1",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-manifest-plugin": "^3.1.1",
+    "webpack-merge": "^5.7.3"
+  }
+}

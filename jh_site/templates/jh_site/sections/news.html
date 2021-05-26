@@ -1,0 +1,22 @@
+{% load markdown_extras %}
+
+<div class="top">
+    <div class="title">
+        <h1> news. </h1>
+    </div>
+</div>
+<div class="section1">
+    <div class="newsbox">
+        {% for item in news %}
+            <h4>>>>&nbsp;{{ item.date|date:"d_m_Y" }}.&nbsp;<<<</h4>
+            <div class="story">
+                <p>
+                    {{ item.body | markdown | safe }}
+                </p>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+<div class="bottom" id="navvy">
+    <a href="#noise"><span class="material-icons  material-icons-down">keyboard_arrow_down</span></a>
+</div>

@@ -1,0 +1,59 @@
+<div class="top">
+    <div class="title">
+      <h1>music.</h1>
+    </div>
+</div>
+<div class="section1">
+    <div class="art_cont mt-5">
+        <div id="cocaineCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                {% for release in releases %}
+                    <button type="button" data-bs-target="#cocaineCarousel" data-bs-slide-to="{{ forloop.counter0 }}" {% if forloop.first %}class="active" aria-current="true"{% endif %} aria-label="{{ release.title }} Carousel Slide"></button>
+                {% endfor %}
+            </div>
+            <div class="carousel-inner">
+                {% for record in releases %}
+                    <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                        <a class="d-block w-100" href="{{ record.spotify_link }}" target="iframe_sp" role="button">
+                            <div class="overlay"></div>
+                            <img src="{{ record.cover_image.url }}" alt="Jamie Hamilton - '{{ record.title }}' cover art" />
+                        </a>
+                        <div class="carousel-caption">
+                            <p>load > {{ record.short_title }}_.</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <button class="carousel-control carousel-control-prev" type="button" data-bs-target="#cocaineCarousel" data-bs-slide="prev">
+                <span class="material-icons">
+                    keyboard_arrow_left
+                </span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control carousel-control-next" type="button" data-bs-target="#cocaineCarousel" data-bs-slide="next">
+                <span class="material-icons">
+                    keyboard_arrow_right
+                </span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <div class="spotify">
+        <iframe name="iframe_sp" src="{{ releases.0.spotify_link }}" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+</div>
+<div class="section2">
+    <div class="musiclinks mt-5">
+        <div class="btn-group-vertical" id="muzik">
+        <a class="btn btn-lg" id="spot" href="https://open.spotify.com/artist/65Yt7ZY6SVtvwGIl60PIX3">spotify.</a>
+        <a class="btn btn-lg" id="itunes" href="https://itunes.apple.com/gb/artist/jamie-hamilton/718479652">itunes.</a>
+        <a class="btn btn-lg" id="amazon" href="https://www.amazon.co.uk/View-Before-We-Hit-Water/dp/B01JPIFX4U">amazon.</a>
+        <a class="btn btn-lg" id="deezer" href="https://www.deezer.com/en/artist/5006320">deezer.</a>
+        <a class="btn btn-lg" id="bandcamp" href="https://jamiehamiltonmusic.bandcamp.com">bandcamp.</a>
+        <a class="btn btn-lg" id="soundcloud" href="https://soundcloud.com/jamiehamiltonmusic">soundcloud</a>
+        </div>
+    </div>
+</div>
+<div class="bottom" id="navvy">
+    <a href="#cinema"><i class="material-icons  material-icons-down">keyboard_arrow_down</i></a>
+</div>

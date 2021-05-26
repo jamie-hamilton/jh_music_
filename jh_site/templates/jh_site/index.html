@@ -1,0 +1,31 @@
+{% extends "jh_site/layout.html" %}
+{% load static %}
+
+{% block content %}
+<section id="main">
+    <article class="panel" id="intro" data-bgUrl="{% static 'images/jh_scr-bg.jpg' %}">
+        {% include 'jh_site/sections/intro.html' %}
+    </article>
+  
+    <article class="panel" id="news" style="top:100%">
+        {% include 'jh_site/sections/news.html' %}
+    </article>
+  
+    <article class="panel" id="noise" style="top:200%">
+        {% include 'jh_site/sections/noise.html' %}
+    </article>
+  
+    <article class="panel" id="cinema" style="top:300%">
+        {% include 'jh_site/sections/cinema.html' %}
+    </article>
+  
+    <article class="panel" id="photos" style="top:400%">
+        {% include 'jh_site/sections/photos.html' %}
+    </article>
+  
+    <article class="panel" id="contact" style="top:500%">
+        {% include 'jh_site/sections/contact.html' %}
+    </article>
+</section>
+
+{% endblock %}

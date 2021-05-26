@@ -1,0 +1,34 @@
+$jh_bg: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600"><defs/><path fill="#8a3268" d="M0 0h100v100H0z"/><path fill="#b9718b" d="M100 0h100v100H100z"/><path fill="#682b5e" d="M200 0h100v100H200z"/><path fill="#7f3b7e" d="M300 0h100v100H300z"/><path fill="#d5947b" d="M400 0h100v100H400z"/><path fill="#a771ad" d="M500 0h100v100H500z"/><path fill="#a5749f" d="M600 0h100v100H600z"/><path fill="#c8ae8d" d="M700 0h100v100H700z"/><path fill="#923372" d="M0 100h100v100H0z"/><path fill="#cc6d9c" d="M100 100h100v100H100z"/><path fill="#b35c95" d="M200 100h100v100H200z"/><path fill="#e86e91" d="M300 100h100v100H300z"/><path fill="#f17d83" d="M400 100h100v100H400z"/><path fill="#bf8ab1" d="M500 100h100v100H500z"/><path fill="#d999a2" d="M600 100h100v100H600z"/><path fill="#e98173" d="M700 100h100v100H700z"/><path fill="#933275" d="M0 200h100v100H0z"/><path fill="#cf478d" d="M100 200h100v100H100z"/><path fill="#f9638e" d="M200 200h100v100H200z"/><path fill="#fa7e85" d="M300 200h100v100H300z"/><path fill="#f6a3a2" d="M400 200h100v100H400z"/><path fill="#f36f92" d="M500 200h100v100H500z"/><path fill="#fe537a" d="M600 200h100v100H600z"/><path fill="#d5245b" d="M700 200h100v100H700z"/><path fill="#9f3a7c" d="M0 300h100v100H0z"/><path fill="#f7477c" d="M100 300h100v100H100z"/><path fill="#fb6285" d="M200 300h100v100H200z"/><path fill="#f9baa8" d="M300 300h100v100H300z"/><path fill="#fd8895" d="M400 300h100v100H400z"/><path fill="#fe2f6c" d="M500 300h100v100H500z"/><path fill="#fa4976" d="M600 300h100v100H600z"/><path fill="#b34e76" d="M700 300h100v100H700z"/><path fill="#8a3a85" d="M0 400h100v100H0z"/><path fill="#f64c7d" d="M100 400h100v100H100z"/><path fill="#fb86a7" d="M200 400h100v100H200z"/><path fill="#fd93b5" d="M300 400h100v100H300z"/><path fill="#fb7297" d="M400 400h100v100H400z"/><path fill="#f2598e" d="M500 400h100v100H500z"/><path fill="#cd5c96" d="M600 400h100v100H600z"/><path fill="#d6778b" d="M700 400h100v100H700z"/><path fill="#641860" d="M0 500h100v100H0z"/><path fill="#cc4a84" d="M100 500h100v100H100z"/><path fill="#f78ace" d="M200 500h100v100H200z"/><path fill="#e872b9" d="M300 500h100v100H300z"/><path fill="#df8d92" d="M400 500h100v100H400z"/><path fill="#d977b4" d="M500 500h100v100H500z"/><path fill="#b65db4" d="M600 500h100v100H600z"/><path fill="#dd8695" d="M700 500h100v100H700z"/></svg>');
+
+$electric-slime: #d9dd48;
+$gamecube-purple: #7b5cdf;
+$midnight-purple: #1e0032;
+$pale-rouge: #e16aa1;
+$respectful-ruby: #e83161;
+$black: #080706;
+
+$custom-colors: (
+  "electric-slime":      $electric-slime,
+  "gamecube-purple":     $gamecube-purple,
+  "midnight-purple":     $midnight-purple,
+  "pale-rouge":          $pale-rouge,
+  "respectful-ruby":     $respectful-ruby,
+  "black":               $black,
+);
+
+$primary: $gamecube-purple;
+$secondary: $electric-slime;
+$light: white;
+$dark: $midnight-purple;
+
+$custom-theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "light":      $light,
+  "dark":       $dark
+);
+
+$colors: map-remove($colors, "blue", "red", "orange", "yellow", "green", "teal", "indigo", "purple", "cyan", "pink");
+$theme-colors: map-remove($theme-colors, "success", "info", "warning", "danger");
+$colors: map-merge($colors, $custom-colors);
+$theme-colors: map-merge($theme-colors, $custom-theme-colors);

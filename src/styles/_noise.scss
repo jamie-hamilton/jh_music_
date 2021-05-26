@@ -1,0 +1,114 @@
+/*
+  N O I S E _.
+*/
+
+#noise {
+    .section1 {
+        grid-column: 1 / span 6;
+        grid-row: 3 / span 9;
+    }
+    .section2 {
+        grid-column: 7 / span 6;
+        grid-row: 3 / span 9;
+    }
+} 
+  
+.spotify {
+    width: 90%;
+    max-height: 80px;
+    max-width: 308px;
+    margin: auto;
+    position: relative;
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 26.7%;
+    background-color: transparent;
+    iframe, embed, object {
+        border-style: solid;
+        border-width: 0px 4px 4px;
+        border-color: white;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        max-height: 80px;
+        background-color: black;
+    }
+}
+  
+.art_cont {
+    width: 90%;
+    margin: auto;
+    img {
+        width: 308px;
+        height: 308px;
+    }
+}
+  
+.musiclinks {
+    height: 100%;
+    max-height: 388px;
+    max-width: 300px;
+    width: 80%;
+    background-color: $electric-slime;
+    text-align: left;
+    margin: auto;
+    border: 4px solid $white;
+}
+  
+#muzik {
+    .btn-lg, .a {
+        margin-left: 0px;
+        margin-top: 10px;
+        text-align: left;
+        font-size: 1.5rem;
+        white-space: normal;
+        border-radius: 0;
+        border: 0px solid $electric-slime;
+        background-color: RGBA(253, 253, 253, 0);
+        color: $pale-rouge;
+        -webkit-transition: border 0.3s ease-out;
+        transition: border 0.3s ease-out;
+        -webkit-transition-timing-function: ease-out;
+        transition-timing-function: ease-out;
+        &:hover {
+            background-color: RGBA(253, 253, 253, 0.3);
+            font-style: italic;
+        }
+    }
+}
+  
+#spot.btn-lg:hover {
+    border-left: 4px solid #1DB954;
+}
+#itunes.btn-lg:hover {
+    border-left: 4px solid #8E8E93;
+}
+#amazon.btn-lg:hover {
+    border-left: 4px solid #FF9900;
+}
+#deezer.btn-lg:hover {
+    border-left: 4px solid #02B5C8;
+}
+#bandcamp.btn-lg:hover {
+    border-left: 4px solid #629AA9;
+}
+#soundcloud.btn-lg:hover {
+    border-left: 4px solid #FF3300;
+}
+  
+@media screen and (max-width: 629px) {
+    .musiclinks {
+        display: none;
+    }
+    #noise {
+        .section1 {
+            grid-column: 1 / span 12;
+            grid-row: 3 / span 9;
+        }
+        .section2 {
+            grid-column: 7 / span 6;
+            grid-row: 3 / span 9;
+        }
+    }
+}

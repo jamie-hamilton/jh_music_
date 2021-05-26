@@ -1,0 +1,22 @@
+<div class="top">
+    <div class="title">
+        <h1>poses.</h2>
+    </div>
+</div>
+<div class="section1 mb-2">
+    <div class="gallery cf">
+        {% for reel in reels %}
+            {% for photo in reel.photos.all %}
+            <div class="reels">
+                <a type="button" href="{{ photo.picture.url }}">
+                    <img class="lazy-img" src="{{ photo.lazy.url }}" data-src="{{ photo.thumbnail.url }}" data-desc="Thumbnail of {{ photo.desc }}" alt="Pixelated placeholder {{reel.era}}{{ forloop.counter }}" />
+                </a>
+            </div>
+            {% endfor %}
+        {% endfor %}
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="bottom" id="navvy">
+    <a href="#contact"><i class="material-icons  material-icons-down">keyboard_arrow_down</i></a>
+</div>

@@ -1,0 +1,64 @@
+/*
+    G L O B A L  S T Y L E S _.
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+  
+html {
+    font-size: 10px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+  
+body {
+    font-family: 'Space Mono', monospace;
+    margin: 0;
+    min-height:500px;
+    height: 100%;
+    position: relative;
+    scrollbar-width: thin;
+    scrollbar-color: $dark $respectful-ruby;
+    &::-webkit-scrollbar {
+        width: 0.25rem;
+    }
+    &::-webkit-scrollbar-track {
+        background: $dark;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: $respectful-ruby;
+    }
+}
+  
+img, embed,
+object, video {
+    max-width: 100%;
+}
+
+h1 {
+    display: block;
+    font-size: 3rem;
+    text-align: left;
+    padding: 2rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 36px;
+}
+  
+.title {
+    display: block;
+}
+  
+.top {
+    grid-column: 1 / span 12;
+    grid-row: 1 / span 2;
+}
+  
+.bottom {
+    grid-column: 1 / span 12;
+    grid-row: 12 / span 1;
+    position: relative;
+}

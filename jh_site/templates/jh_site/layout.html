@@ -1,0 +1,28 @@
+{% load manifest %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    {% block title %}<title>Jamie Hamilton | Music.</title>{% endblock %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="{% manifest 'main.js' %}"></script>
+    <script src="{% manifest 'vendor.js' %}"></script>
+    {% block scripts %}{% endblock %}
+    {% if not debug %}
+    <!--<link rel="stylesheet" href="{% manifest 'main.css' %}" />-->
+    {% endif %}
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-fixed-top" id="navvy">
+              <a href="#intro" class="scroller"><p>jamie_hamilton.</p></a>
+              <a href="#intro" class="scroller"><h2>j_h.</h2></a>
+            </nav>
+          </header>
+        {% block content %}{% endblock %}
+    </body>
+</html>

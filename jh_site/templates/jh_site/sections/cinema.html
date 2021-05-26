@@ -1,0 +1,29 @@
+<div class="top">
+    <div class="title">
+      <h1> videos. </h1>
+    </div>
+</div>
+<div class="section1">
+    <div class="videowrap mt-sm-5">
+    <div class="ratio ratio-16x9">
+    <iframe name="iframe_a" src="{{ cinema.0.youtube_link }}" frameborder="0" allow="autoplay; encrypted-media" allowFullScreen='allowFullScreen'></iframe>
+    </div>
+    </div>
+</div>
+<div class="section2">
+    <div class="videos_cont1">
+        {% for video in cinema %}
+        <a class="btn btn-lg" href="{{ video.youtube_link }}" target="iframe_a" role="button">{{ video.title }}</a>
+        {% endfor %}
+    </div>
+    <div class="videos_cont2 mt-sm-5">
+        <div class="btn-group-vertical" id="watchlist">
+            {% for video in cinema %}
+            <a class="btn btn-lg" href="{{ video.youtube_link }}" target="iframe_a" role="button">{{ video.title }}</a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<div class="bottom" id="navvy">
+    <a href="#photos"><i class="material-icons material-icons-down">keyboard_arrow_down</i></a>
+</div>
