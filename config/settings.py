@@ -44,9 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'manifest_loader',
-    'storages',
     'jh_site',
-    
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -134,11 +133,10 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'staticfiles'),
 )
 
+STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 
 if DEBUG:
-    # Static URL development
-    STATIC_URL = 'static/'
     # Uploaded media in development
     MEDIA_URL = '/media/'
     MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
