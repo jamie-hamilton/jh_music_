@@ -4,6 +4,9 @@
   "description": "Assets for Jamie Hamilton music site",
   "main": "webpack.common.js",
   "private": true,
+  "engines": {
+    "node": "12.x"
+  },
   "scripts": {
     "start": "webpack serve --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
