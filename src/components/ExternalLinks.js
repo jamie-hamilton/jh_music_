@@ -4,7 +4,7 @@ class TargetBuilder {
     }
 
     events() {
-        document.addEventListener('DOMContentLoaded',() => this.linkHandler())
+        this.linkHandler()
     }
     linkHandler() {
         var links = document.links;

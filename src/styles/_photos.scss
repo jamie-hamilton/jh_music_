@@ -21,10 +21,6 @@
         background: white;
     }
 }
-
-.lazy-img {
-    border: 4px solid $black;
-}
   
 .gallery {
     width: 100%;
@@ -51,6 +47,9 @@
             height: auto;
             transition: .2s transform;
             transform: translateZ(0);
+            img {
+                border: 4px solid $black;
+            }
         }
         &:hover {
             z-index: 3;

@@ -9,23 +9,59 @@
     right: 0px;
     z-index: 10;
     color: lightgray;
-    a {
+    .scroller {
         color: white;
         opacity: 0.8;
+        -webkit-transition: background 0.2s;
+        transition: background 0.2s;
+        -webkit-transition-timing-function: ease-in-out;
+        transition-timing-function: ease-in-out;
         &:hover {
-            color: white;
             opacity: 1;
             text-decoration: none;
+        }
+        &.scroller.news {
+            color: $midnight-purple;
+            p, h2 {
+                background: $pale-rouge;
+            }
+        }
+        &.scroller.noise {
+            color: $pale-rouge;
+            p, h2 {
+                background: $electric-slime;
+            }
+        }
+        &.scroller.cinema {
+            color: $electric-slime;
+            p, h2 {
+                background: $respectful-ruby;
+            }
+        }
+        &.scroller.photos {
+            color: $gamecube-purple;
+            p, h2 {
+                background: white;
+            }
+        }
+        &.scroller.contact {
+            color: white;
+            p, h2 {
+                background: $respectful-ruby;
+            }
         }
     }
     p {
         float: left;
         padding: 0 2px 1px 2px;
         background: black;
-        opacity: 0.8;
+        opacity: 0.95;
         margin-top: 10px;
         margin-left: 10px;
-        font-size: 1.5rem;
+        font-size: 1.5rem;-webkit-transition: background 0.2s;
+        transition: background 0.2s;
+        -webkit-transition-timing-function: ease-in-out;
+        transition-timing-function: ease-in-out;
         &:hover {
             opacity: 1;
         }
@@ -35,9 +71,13 @@
         font-size: 3.2rem;
         padding: 0 2px 15px 2px;
         background: black;
-        opacity: 0.75;
+        opacity: 0.95;
         margin-top: 10px;
         margin-right: 10px;
+        -webkit-transition: background 0.2s;
+        transition: background 0.2s;
+        -webkit-transition-timing-function: ease-in-out;
+        transition-timing-function: ease-in-out;
         &:hover {
             opacity:1;
         }
@@ -97,7 +137,7 @@
   
 #cinema .material-icons {
     font-size: 5.5rem;
-    color: $respectful-ruby;
+    color: $gamecube-purple;
 }
   
 #photos .material-icons {
@@ -167,34 +207,20 @@
             color: $respectful-ruby;
             border-bottom: 2px solid $dark;
         }
-        /*
-        &:nth-child(6n + 1) {
-            background: image-url('BTLrg.png') no-repeat center top fixed;
-            background-size: cover;
-            background-blend-mode: overlay;
-            width: 100%;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-color: #8C60C1;
-            @media screen and (max-width: 999px) {
-                background: image-url('BT.png') no-repeat center top fixed;
-            }
-            @media screen and (max-width: 568px)  {
-                background: image-url('BTSml.png') no-repeat center top fixed;
-            }
-        }*/
     }
 }
 
-.btn-lg, .btn-group-lg>.btn {
+.btn-lg, .btn-group-lg >.btn {
     padding: 10px 16px;
 }
 
 .foot {
     text-align: right;
     background-color: inherit;
-    margin: 15px 15px 0px 0px;
+    margin: 15px 15px 0px 15px;
     padding: 0;
-    font-size: 1rem;
+    font-size: 1.2rem;
+    @media screen and (max-width: 400px) {
+        font-size: 0.9rem;
+    }
 }
