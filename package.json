@@ -5,7 +5,8 @@
   "main": "webpack.common.js",
   "private": true,
   "engines": {
-    "node": "12.x"
+    "node": "12.x",
+    "npm": "7.x"
   },
   "scripts": {
     "start": "webpack serve --config webpack.dev.js",
