@@ -134,10 +134,9 @@ STATICFILES_DIRS = (
 )
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+STATIC_URL = 'static/'
 
 if DEBUG:
-    # Static URL development
-    STATIC_URL = 'static/'
     # Uploaded media in development
     MEDIA_URL = '/media/'
     MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -146,7 +145,6 @@ else:
 
     # Uploaded static in production - compressed by whitenoise and served on CDN
     STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-    STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, 'static/')
     
     # Uploaded media in production - stored in bucket and served on CDN
     AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
