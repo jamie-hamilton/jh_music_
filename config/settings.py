@@ -149,10 +149,6 @@ else:
     AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
     AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
 
-    # Tell django-storages the domain to use to refer to media files.
-    AWS_S3_REGION_NAME = 'eu-west-2'
-    AWS_S3_CUSTOM_DOMAIN = 's3.%s.amazonaws.com/%s' % (AWS_S3_REGION_NAME, AWS_STORAGE_BUCKET_NAME)
-
     # boto3 - include HTTP headers to allow for caching
     AWS_S3_OBJECT_PARAMETERS = {
         'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
@@ -160,7 +156,7 @@ else:
     }
 
     AWS_LOCATION = 'media'
-    MEDIA_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
+    MEDIA_URL = 'https://%s/%s/' % (config('AWS_S3_CUSTOM_DOMAIN'), AWS_LOCATION)
     DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 # Heroku: Update database configuration from $DATABASE_URL.

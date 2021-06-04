@@ -207,6 +207,16 @@
             color: $respectful-ruby;
             border-bottom: 2px solid $dark;
         }
+        .top {
+            grid-column: 1 / span 12;
+            grid-row: 1 / span 2;
+        }
+          
+        .bottom {
+            grid-column: 1 / span 12;
+            grid-row: 12 / span 1;
+            position: relative;
+        }
     }
 }
 
