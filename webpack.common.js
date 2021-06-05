@@ -8,6 +8,7 @@ module.exports = {
     entry: {
         main: "./src/index.js",
         vendor: "./src/vendor.js",
+        background: "./src/loadBackground.js"
     },
     plugins: [
         new CleanWebpackPlugin(),

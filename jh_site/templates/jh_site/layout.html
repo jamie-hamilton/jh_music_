@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="{% manifest 'main.js' %}" {% if debug %}defer{% endif %}></script>
     <script src="{% manifest 'vendor.js' %}" {% if debug %}defer{% endif %}></script>
+    <script src="{% manifest 'background.js' %}"></script>
     {% block scripts %}{% endblock %}
     {% if not debug %}
     <link rel="stylesheet" href="{% manifest 'main.css' %}" />
