@@ -24,4 +24,4 @@ __tl;dr:__
 
 - what it looks like:
 
-![portfolio screenshot](https://s3.eu-west-2.amazonaws.com/media.jh-portfolio/media/project_images/jh_music-1.png)
+![portfolio screenshot](https://s3.eu-west-2.amazonaws.com/media.jh-portfolio/media/project_images/j_h_music-1-sm.jpg)
